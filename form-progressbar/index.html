@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Multi Step Form | </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header> Registrate </header>
+        <div class="progress-bar">
+            <div class="step">
+                <p>Nombre</p>
+                <div class="bullet"><span>1</span></div>
+                <div class="check fas fa-check"><p style="color:#fff">✔</p></div>
+            </div>
+            <div class="step">
+                <p>Contacto</p>
+                <div class="bullet"><span>2</span></div>
+                <div class="check fas fa-check"><p style="color:#fff">✔</p></div>
+            </div>
+            <div class="step">
+                <p>Fechas</p>
+                <div class="bullet"><span>3</span></div>
+                <div class="check fas fa-check"><p style="color:#fff">✔</p></div>
+            </div>
+            <div class="step">
+                <p>Final</p>
+                <div class="bullet"><span>4</span></div>
+                <div class="check fas fa-check"><p style="color:#fff">✔</p></div>
+            </div>
+        </div>
+
+        <div class="form-outer">
+            <form action="#">
+
+                <div class="page slidepage">
+                    <div class="title">Información Básica:</div>
+                    <div class="field">
+                        <div class="label">Nombre: </div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">Apellido: </div>
+                        <input type="text">
+                    </div>
+                    <div class="field nextBtn">
+                        <button>Siguiente</button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Información de Contacto:</div>
+                    <div class="field">
+                        <div class="label">E-mail: </div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">Celular: </div>
+                        <input type="number">
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-1 prev">Anterior</button>
+                        <button class="next-1 next">Siguiente</button>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="title">Datos de Nacimiento:</div>
+                    <div class="field">
+                        <div class="label">Día de Nacimiento: </div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">Género: </div>
+                        <select>
+                            <option>Mujer</option>
+                            <option>Hombre</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-2 prev">Anterior</button>
+                        <button class="next-2 next">Siguiente</button>
+                    </div>
+                </div>
+
+                
+                <div class="page">
+                    <div class="title">Detalles de Login:</div>
+                    <div class="field">
+                        <div class="label">Username: </div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">Contraseña: </div>
+                        <input type="password">
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-3 prev">Anterior</button>
+                        <button class="Submit">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url("bg.png"), -webkit-linear-gradient(bottom, #4e7abd, #d16a9f);
+    background-color: pink;
+}
+
+.container {
+    width: 350px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+
+.container header{
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.container .form-outer{
+    width: 100%;
+    overflow: hidden;
+}
+
+.container form{
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+
+}
+
+.form-outer form .page .field{
+    height: 45px;
+    width:330px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+.form-outer form .page .field .label{
+    position:absolute;
+    top:-30px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field input{
+    height: 100%;
+    width:100%;
+    border:1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.form-outer form .page .field button{
+    width: 100%;
+    height: calc(100% );
+    margin-top: -20px;
+    border:none;
+    border-radius: 5px;
+    background: #d16a9f;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor:pointer;
+    transition: 0.3s ease;
+}
+
+.form-outer form .page .field button:hover{
+    background: #000;
+}
+
+.form-outer form .page .field .btns button{
+    margin-top: -20px!important;
+}
+
+form .page .btns button.prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next{
+    margin-left: 3px;
+    font-size: 17px;
+}
+
+.container .progress-bar{
+    display: flex;
+    margin: 40px 0;
+}
+
+.container .progress-bar .step{ 
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.progress-bar .step .check{
+    position: absolute;
+    left: 50%;
+    top:70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+    transition: 0.2s;
+}
+
+.progress-bar .step p.active{
+    color:#d16a9f;
+}
+
+.progress-bar .step .bullet{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+
+}
+
+.progress-bar .step .bullet.active{
+    border-color: #d16a9f;
+    background: #d16a9f;
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+    display:none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+    position: absolute;
+    content: '';
+    bottom: 9px;
+    right:-51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+}
+
+.progress-bar .step .bullet.active:after{
+    background: #d16a9f;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step .bullet span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.progress-bar .step .bullet.active span{
+    display: none;
+}
+
+.progress-bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+
+.progress-bar .step .check.active{
+    display: block;
+    color: #fff;
+}
